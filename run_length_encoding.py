@@ -20,7 +20,7 @@ def encode(input_string):
 
 
 def decode(lst):
-    q = ''
+    q = ""
     for character, count in lst:
         q += character * count
-    return a
+    return q
