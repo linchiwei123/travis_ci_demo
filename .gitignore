@@ -2,3 +2,4 @@ venv/
 .hypothesis/
 .pytest*
 __pycache__/
+.vscode/
