@@ -23,4 +23,4 @@ def decode(lst):
     q = ''
     for character, count in lst:
         q += character * count
-    return q
+    return a
