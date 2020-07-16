@@ -1,7 +1,7 @@
-from hypothesis import given, example
+from hypothesis import example, given
 from hypothesis.strategies import text
 
-from .run_length_encoding import encode, decode
+from .run_length_encoding import decode, encode
 
 
 @given(text())
