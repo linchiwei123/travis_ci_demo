@@ -21,9 +21,10 @@ matrix:
         - |
           curl -L -O https://www.python.org/ftp/python/3.8.5/python-3.8.5-macosx10.9.pkg
           sudo installer -package python-3.8.5-macosx10.9.pkg -target /
+          sudo /Applications/Python\ 3.8/Install\ Certificates.command
           sudo ln -s python3 /usr/local/bin/python
           hash -r
           python -mpip install --upgrade pip wheel
-          python -mpip install certifi pytest
+          python -mpip install pytest
           python -mpip install -r requirements.txt
       script: python -m pytest -v
