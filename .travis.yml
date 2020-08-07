@@ -1,18 +1,18 @@
 matrix:
   include:      
-    - name: "Python 3.6.5 on macOS 10.13"
-      os: osx
-      osx_image: xcode9.4  # Python 3.6.5 running on macOS 10.13
-      language: shell  # 'language: python' is an error on Travis CI macOS
-      before_install:
-        - python3 --version
-        - pip3 install -U pip
-        - pip3 install -U pytest
-        - pip3 install codecov
-      install:
-        - pip3 install -r requirements.txt
-      script: python3 -m pytest
-      after_success: python 3 -m codecov
+#     - name: "Python 3.6.5 on macOS 10.13"
+#       os: osx
+#       osx_image: xcode9.4  # Python 3.6.5 running on macOS 10.13
+#       language: shell  # 'language: python' is an error on Travis CI macOS
+#       before_install:
+#         - python3 --version
+#         - pip3 install -U pip
+#         - pip3 install -U pytest
+#         - pip3 install codecov
+#       install:
+#         - pip3 install -r requirements.txt
+#       script: python3 -m pytest
+#       after_success: python 3 -m codecov
     - name: "xcode9"
       os: osx
       osx_image: xcode9
@@ -22,6 +22,7 @@ matrix:
           curl -L -O https://www.python.org/ftp/python/3.8.5/python-3.8.5-macosx10.9.pkg
           sudo installer -package python-3.8.5-macosx10.9.pkg -target /
           sudo ln -s python3 /usr/local/bin/python
+          sudo /Applications/Python\ 3.8/Install\ Certificates.command
           hash -r
           python -mpip install --upgrade pip wheel
           python -mpip install certifi pytest
