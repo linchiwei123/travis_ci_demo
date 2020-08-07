@@ -27,4 +27,4 @@ matrix:
           python -mpip install --upgrade pip wheel
           python -mpip install certifi pytest
           python -mpip install -r requirements.txt
-      script: python -m pytest
+      script: python -m pytest -v
